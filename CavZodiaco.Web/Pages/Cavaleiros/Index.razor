@@ -1,0 +1,34 @@
+﻿@page "/cavaleiros"
+@page "/cavaleiros/index"
+@inject HttpClient Http
+
+<PageTitle>CavZodiaco - Cavaleiros de Ouro</PageTitle>
+
+<MudText Typo="Typo.h3">Cavaleiros de Ouro</MudText>
+<MudText Class="mb-8">Uma demonstração dos Cavaleiros de Ouro do anime!</MudText>
+
+@if (cavaleiros == null)
+{
+    <MudProgressCircular Color="Color.Default" Indeterminate="true" />
+}
+else
+{
+    <MudGrid>
+        @foreach (var cavaleiro in cavaleiros)
+        {
+            <MudItem sm="12" md="6" lg="4">
+                <CavaleirosCard Cavaleiros="@cavaleiro"></CavaleirosCard>
+            </MudItem>
+        }
+    </MudGrid>
+    
+}
+
+@code {
+    private Cavaleiros[]? cavaleiros;
+    
+    protected override async Task OnInitializedAsync()
+    {
+        cavaleiros = await Http.GetFromJsonAsync<Cavaleiros[]>("Cavaleiros");
+    }
+} 

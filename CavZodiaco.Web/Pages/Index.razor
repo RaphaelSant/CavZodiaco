@@ -1,7 +1,21 @@
 ﻿@page "/"
 
-<PageTitle>Index</PageTitle>
+<PageTitle>CavZodiaco - Página Inicial</PageTitle>
 
-<MudText Typo="Typo.h3" GutterBottom="true">Hello, world!</MudText>
-<MudText Class="mb-8">Welcome to your new app, powered by MudBlazor!</MudText>
-<MudAlert Severity="Severity.Normal">You can find documentation and examples on our website here: <MudLink Href="https://mudblazor.com" Typo="Typo.body2" Color="Color.Inherit"><b>www.mudblazor.com</b></MudLink></MudAlert>
+<MudText Typo="Typo.h3" GutterBottom="true">CavZodiaco Wizard</MudText>
+<MudText Class="mb-16">Consulte as armaduras utilizadas pelo universo de Caveleiros do Zodiaco!</MudText>
+
+<MudText Class="mb-16">A aplicação tem 4 páginas, sendo essa a Página Inicial, a página Cavaleiros de Ouro onde a mesma mostra os dados de uma tabela do Banco de Dados, a página Pokemons onde tentei inovar e ler os nomes de todos os pokemons através do site 'https://pokeapi.co/' só que deveria ser feito uma alteração no arquivo 'WeatherForecastController' que não consegui adaptar para fazer a leitura do arquivo Json, em seguida temos a página sobre que informa a finalidade da criação desse App!" </MudText>
+
+<Lista 
+    Titulo="Metas Batidas"
+    Item="Ser responsivo (10 pontos);Ter uma página inicial de apresentação do projeto (10 pontos);Ter um menu de navegação (10 pontos);Ter pelo menos 1 componente parametrizado (10 pontos);Ter uma página que mostre os dados de um arquivo JSON em formato de tabela (10 pontos);Ter uma página que mostre os dados de uma tabela em um banco de dados em formato de Card (20 pontos);"
+>
+</Lista>
+
+<MudAlert Severity="Severity.Normal" Dense="true" ContentAlignment="HorizontalAlignment.Center">
+    Você pode consultar também na página oficial do anime: 
+    <MudLink Href="https://www.cavzodiaco.com.br/" 
+    Typo="Typo.body2" 
+    Color="Color.Inherit"><b>www.cavzodiaco.com.br</b></MudLink>
+</MudAlert>

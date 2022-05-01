@@ -1,0 +1,41 @@
+﻿@page "/pokemons"
+@inject HttpClient Http
+@using CavZodiaco.Web.Shared
+@using CavZodiaco.Core.Models
+
+<PageTitle>Weather forecast</PageTitle>
+
+<MudText Typo="Typo.h3" GutterBottom="true">Pokemons</MudText>
+<MudText Class="mb-8">Uma breve demonstração dos nomes de todos os pokemons do universo do anime!</MudText>
+@if (forecasts == null)
+{
+    <MudProgressCircular Color="Color.Default" Indeterminate="true" />
+}
+else
+{
+    <MudTable Items="forecasts" Hover="true" SortLabel="Sort By" Elevation="0">
+        <HeaderContent>
+            <MudTh><MudTableSortLabel SortBy="new Func<Core.Models.WeatherForecast, object>(x=>(x.Name!))">Nome</MudTableSortLabel></MudTh>
+            <MudTh><MudTableSortLabel SortBy="new Func<Core.Models.WeatherForecast, object>(x=>(x.Url!))">Url</MudTableSortLabel></MudTh>
+        </HeaderContent>
+        <RowTemplate>
+            <MudTd DataLabel="Nome">@context.Name</MudTd>
+            <MudTd DataLabel="Date"><MudLink Href="@context.Url">@context.Url</MudLink></MudTd>
+        </RowTemplate>
+        <PagerContent>
+            <MudTablePager PageSizeOptions="new int[]{50, 100, 1000}" />
+        </PagerContent>
+    </MudTable>
+}
+
+
+@code {
+    private Core.Models.WeatherForecast[]? forecasts;
+
+    protected override async Task OnInitializedAsync()
+    {
+        forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("WeatherForecast");
+        //sample-data/weather.json
+    }
+    
+}

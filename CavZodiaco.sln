@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CavZodiaco.Web", "CavZodiaco.Web\CavZodiaco.Web.csproj", "{A0129A30-6F04-4B73-932F-2541B22DDFE9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CavZodiaco.Web", "CavZodiaco.Web\CavZodiaco.Web.csproj", "{A0129A30-6F04-4B73-932F-2541B22DDFE9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CavZodiaco.Core", "CavZodiaco.Core\CavZodiaco.Core.csproj", "{D2CDC2B2-8CA9-417E-AC4B-90884737BF31}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CavZodiaco.Core", "CavZodiaco.Core\CavZodiaco.Core.csproj", "{D2CDC2B2-8CA9-417E-AC4B-90884737BF31}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CavZodiaco.Api", "CavZodiaco.Api\CavZodiaco.Api.csproj", "{41E146A9-CDDA-40D4-8F48-3BF4C66EF732}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CavZodiaco.Api", "CavZodiaco.Api\CavZodiaco.Api.csproj", "{41E146A9-CDDA-40D4-8F48-3BF4C66EF732}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

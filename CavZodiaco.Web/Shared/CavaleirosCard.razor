@@ -1,0 +1,11 @@
+﻿<MudCard Style="height:100%">
+    <MudCardMedia Image="@Cavaleiros.Imagem" Style="background-size:contain" Height="350" />
+    <MudCardContent>
+        <MudText Typo="Typo.h5" Class="mb-4">@Cavaleiros.Name</MudText>
+        <MudText Typo="Typo.body2" Align="Align.Justify">@Cavaleiros.Descricao</MudText>
+    </MudCardContent>
+</MudCard>
+@code {
+    [Parameter]
+    public Cavaleiros? Cavaleiros { get; set; }
+}
